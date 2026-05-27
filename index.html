@@ -271,31 +271,48 @@
 </button>
             </div>
 
-            <div class="bg-black/40 p-8 rounded-2xl border border-white/5 text-left w-full mt-10">
+           <div class="bg-black/40 p-8 rounded-2xl border border-white/5 text-left w-full mt-10">
     <h3 class="text-xl font-bold mb-2">Book a Strategy Session</h3>
     <p class="text-sm text-gray-400 mb-6">You built the brand. Let us build the momentum. Drop your details below, and let's map out your growth trajectory.</p>
     
-    <form action="YOUR_FORMSPREE_LINK_HERE" method="POST" class="space-y-4">
+    <form action="https://formspree.io/f/xredrpvk" method="POST" class="space-y-4">
         <input type="hidden" name="_next" value="https://bran-stan.com/success.html">
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-                <label class="block text-xs text-gray-400 mb-1">Your Name</label>
+                <label class="block text-xs text-gray-400 mb-1">Your Name *</label>
                 <input type="text" name="Name" required class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition">
             </div>
             <div>
-                <label class="block text-xs text-gray-400 mb-1">Brand Name</label>
+                <label class="block text-xs text-gray-400 mb-1">Brand/Business Name *</label>
                 <input type="text" name="Brand" required class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition">
             </div>
         </div>
+        
         <div>
-            <label class="block text-xs text-gray-400 mb-1">Email Address</label>
+            <label class="block text-xs text-gray-400 mb-1">Email Address *</label>
             <input type="email" name="Email" required class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition">
         </div>
+
         <div>
-            <label class="block text-xs text-gray-400 mb-1">Biggest Marketing Challenge?</label>
+            <label class="block text-xs text-gray-400 mb-1">Service you want to opt for *</label>
+            <select name="Service" required class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition appearance-none">
+                <option value="" disabled selected>Select a service...</option>
+                <option value="Generative Engine Optimizer">Generative Engine Optimizer</option>
+                <option value="Market Research">Market Research</option>
+                <option value="Cultural Research">Cultural Research</option>
+                <option value="Social Listening">Social Listening</option>
+                <option value="Social Media Management">Social Media Management</option>
+                <option value="Growth Strategy">Growth Strategy</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div>
+            <label class="block text-xs text-gray-400 mb-1">Biggest Marketing Challenge? *</label>
             <textarea name="Challenge" rows="3" required class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition"></textarea>
         </div>
+        
         <button type="submit" class="w-full bg-gradient-brand text-white font-bold py-4 rounded-xl hover:opacity-90 transition transform hover:scale-[1.02] shadow-lg">
             Submit Discovery Form
         </button>
