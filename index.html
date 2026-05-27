@@ -271,15 +271,36 @@
 </button>
             </div>
 
-            <div class="bg-black/40 p-8 rounded-2xl border border-white/5 text-left">
-                <h3 class="text-xl font-bold mb-2">Book a Strategy Session</h3>
-                <p class="text-sm text-gray-400 mb-6">Click below to fill out our Discovery Form. Tell us a bit about your brand's current challenges, and let's map out your growth trajectory.</p>
-                
-                <a href="https://forms.gle/Jg7KmE2k5c926QZu6" target="_blank" class="block w-full text-center bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition transform hover:scale-[1.02]">
-                    Open Discovery Form
-                </a>
+            <div class="bg-black/40 p-8 rounded-2xl border border-white/5 text-left w-full mt-10">
+    <h3 class="text-xl font-bold mb-2">Book a Strategy Session</h3>
+    <p class="text-sm text-gray-400 mb-6">You built the brand. Let us build the momentum. Drop your details below, and let's map out your growth trajectory.</p>
+    
+    <form action="YOUR_FORMSPREE_LINK_HERE" method="POST" class="space-y-4">
+        <input type="hidden" name="_next" value="https://bran-stan.com/success.html">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-xs text-gray-400 mb-1">Your Name</label>
+                <input type="text" name="Name" required class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition">
+            </div>
+            <div>
+                <label class="block text-xs text-gray-400 mb-1">Brand Name</label>
+                <input type="text" name="Brand" required class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition">
             </div>
         </div>
+        <div>
+            <label class="block text-xs text-gray-400 mb-1">Email Address</label>
+            <input type="email" name="Email" required class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition">
+        </div>
+        <div>
+            <label class="block text-xs text-gray-400 mb-1">Biggest Marketing Challenge?</label>
+            <textarea name="Challenge" rows="3" required class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-gradient-brand text-white font-bold py-4 rounded-xl hover:opacity-90 transition transform hover:scale-[1.02] shadow-lg">
+            Submit Discovery Form
+        </button>
+    </form>
+</div>
     </section>
 
     <footer class="border-t border-white/10 bg-black py-8 text-center mt-10">
