@@ -156,20 +156,6 @@ export default function ContactPage({
                       <option>Exploring</option>
                     </select>
                   </div>
-                  <div>
-                    <label className="block text-xs uppercase tracking-[0.15em] text-gray-400 mb-2">Monthly marketing budget</label>
-                    <select
-                      name="Budget"
-                      className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition appearance-none"
-                      defaultValue=""
-                    >
-                      <option value="" disabled>Select range...</option>
-                      <option>Under $5k</option>
-                      <option>$5k – $15k</option>
-                      <option>$15k – $50k</option>
-                      <option>$50k+</option>
-                    </select>
-                  </div>
                 </div>
 
                 <button
