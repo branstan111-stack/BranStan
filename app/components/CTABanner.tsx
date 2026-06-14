@@ -4,7 +4,8 @@ export function CTABanner({
   eyebrow = 'Ready when you are',
   title,
   subtitle,
-  primaryLabel = 'Book a Strategy Session',
+  primaryLabel = 'Start an engagement',
+  primaryHref = '/contact?service=Consumer%20Intelligence%20Sprint',
   secondaryLabel,
   secondaryHref,
 }: {
@@ -12,6 +13,7 @@ export function CTABanner({
   title?: React.ReactNode;
   subtitle?: string;
   primaryLabel?: string;
+  primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
 }) {
@@ -35,11 +37,11 @@ export function CTABanner({
             </h2>
             <p className="section-sub mx-auto">
               {subtitle ??
-                'Whether you are ready for a full growth strategy or just want to chat about where your brand is heading — open the contact tab and let us map it out.'}
+                'Tell us the decision you are about to make. We will scope the intelligence engagement that gives you defensible signal before you commit.'}
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                href="/contact"
+                href={primaryHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-base"

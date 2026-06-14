@@ -3,9 +3,10 @@ import type { Metadata } from 'next';
 export const SITE = {
   name: 'BranStan',
   url: 'https://bran-stan.com',
-  tagline: 'We Stan Your Brand',
+  tagline: 'AI-native Consumer Intelligence',
+  brandMark: 'We Stan Your Brand',
   description:
-    'BranStan is an agentic AI marketing consultancy. We deploy six specialist agents — cultural, GEO, research, listening, social, and growth — to build brands that compound.',
+    'BranStan is an AI-native Consumer Intelligence company. We help brands understand consumers, culture, competitors, and AI visibility before they make growth decisions.',
   ogImage: '/og-default.png',
   twitter: '@branstan',
   email: 'branstan.111@gmail.com',
@@ -59,8 +60,18 @@ export const organizationSchema = {
   url: SITE.url,
   logo: `${SITE.url}/favicon.svg`,
   description: SITE.description,
+  slogan: SITE.brandMark,
   founder: { '@type': 'Person', name: 'Anubhuti' },
   sameAs: [SITE.whatsapp],
+  knowsAbout: [
+    'Consumer Intelligence',
+    'Cultural Analysis',
+    'Competitive Intelligence',
+    'Generative Engine Optimization',
+    'AI Visibility',
+    'Social Listening',
+    'Market Research',
+  ],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',

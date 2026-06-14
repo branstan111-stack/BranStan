@@ -1,38 +1,38 @@
 const STEPS = [
   {
     n: '01',
-    title: 'Diagnose',
-    body: 'We start with a growth diagnostic to find your real bottleneck — not the symptom you think it is.',
+    title: 'Frame the question',
+    body: 'Every Sprint starts with the decision you are about to make. We frame the intelligence around the bet, not the dashboard.',
   },
   {
     n: '02',
-    title: 'Strategize',
-    body: 'Two to three quarterly bets with explicit success criteria. The rest of the tactical work sequences behind them.',
+    title: 'Ingest the signal',
+    body: 'The engine pulls from twenty-plus consumer, cultural, competitive, and AI-visibility surfaces — continuously.',
   },
   {
     n: '03',
-    title: 'Deploy',
-    body: 'The specialist agents go live. Cultural, GEO, research, listening, social — whichever the plan calls for.',
+    title: 'Synthesize the intelligence',
+    body: 'LLM-driven pattern extraction, reviewed and pruned by a senior strategist. We do not ship raw AI output.',
   },
   {
     n: '04',
-    title: 'Iterate',
-    body: 'Weekly review. What shipped, what moved, what to change. Strategy that does not get re-examined drifts.',
+    title: 'Deliver the recommendation',
+    body: 'A written readout with the findings, the decisions they support, and a sequenced 90-day growth recommendation.',
   },
 ];
 
 export function ProcessTimeline() {
   return (
-    <section className="py-32 relative bg-black/40 border-y border-white/5">
+    <section id="how" className="py-32 relative bg-black/40 border-y border-white/5">
       <div className="container-page">
         <div className="max-w-3xl reveal">
-          <p className="eyebrow mb-6">How we work</p>
+          <p className="eyebrow mb-6">How it works</p>
           <h2 className="section-h">
-            A growth system, <br />
-            <span className="text-gradient">not a campaign sprint.</span>
+            From signal to <br />
+            <span className="text-gradient">strategic decision.</span>
           </h2>
           <p className="section-sub">
-            Most marketing engagements stop at campaigns. We build the operating system underneath them — the part that makes every campaign compound rather than reset.
+            Most engagements stop at dashboards. We stop at decisions. The intelligence is only useful if it changes what you do next quarter.
           </p>
         </div>
 

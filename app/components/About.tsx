@@ -5,18 +5,18 @@ export function About() {
         <div className="lg:col-span-7 reveal">
           <p className="eyebrow mb-6">Why BranStan exists</p>
           <h2 className="section-h">
-            Your brand is personal. <br />
-            <span className="text-gray-500">We treat it that way.</span>
+            Founders deserve <br />
+            <span className="text-gray-500">intelligence, not opinions.</span>
           </h2>
           <div className="mt-8 space-y-6 text-gray-300 text-lg font-light leading-relaxed max-w-2xl">
             <p>
-              Behind every brand is a story, late nights, and a vision that matters deeply to its creator. I started BranStan because I understand exactly how close your business is to your heart. It is not just a logo or a product; it is your baby.
+              I started BranStan because the founders I worked with kept making seven-figure growth decisions on stale research, gut feel, and slideware dressed up as strategy. The decisions that mattered most were the ones with the weakest signal underneath them.
             </p>
             <p>
-              The marketing world is loud, crowded, and often overwhelming for founders who just want to focus on what they do best. You do not need another generic software subscription. You need a dedicated partner.
+              BranStan is the answer to that gap. An AI-native intelligence partner that helps you see your consumer, your culture, your competitors, and your AI visibility clearly — before you spend on the next bet.
             </p>
             <p>
-              That is what <strong className="text-white font-semibold">BranStan</strong> means. I stan for your brand. I support it, champion it, and fight for its visibility. Let&apos;s make your brand unstoppable.
+              The brand promise is in the name. <strong className="text-white font-semibold">We Stan Your Brand</strong> — we support it, champion it, and fight for it. The way we do that is by giving you the sharpest read of your market a founder-led team can buy.
             </p>
           </div>
 
@@ -36,16 +36,16 @@ export function About() {
             <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-6">How we operate</p>
             <ul className="space-y-5">
               <Pillar
-                title="One partner, six agents"
-                body="You get a single point of accountability — and the depth of a six-person specialist team."
+                title="Intelligence, not opinions"
+                body="Every recommendation is grounded in cited consumer, cultural, competitive, or AI-visibility signal — never founder gut feel dressed up as strategy."
               />
               <Pillar
-                title="Strategy at the speed of decisions"
-                body="The planning cycle is compressed from weeks to days. You move when the market moves."
+                title="Decisions at the speed of the market"
+                body="Sprint cycles deliver a defensible read in 14 days. You move when the signal moves."
               />
               <Pillar
-                title="Outcomes, not output"
-                body="We measure ourselves on the metrics that matter — pipeline, share-of-voice, brand citation rate."
+                title="Senior judgment over raw AI output"
+                body="The engine compresses the desk-research phase. A senior strategist owns synthesis, pruning, and what reaches you."
               />
             </ul>
           </div>

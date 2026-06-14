@@ -3,16 +3,19 @@ import { AgentCard } from './AgentCard';
 
 export function AgentGrid() {
   return (
-    <section id="services" className="py-32 relative">
+    <section id="engine" className="py-32 relative">
       <div className="container-page">
         <div className="text-center max-w-3xl mx-auto reveal">
-          <p className="eyebrow mb-6">The system</p>
+          <p className="eyebrow mb-6">Inside the engine</p>
           <h2 className="section-h">
-            The minds behind <br />
-            <span className="text-gradient">your growth.</span>
+            The proprietary <br />
+            <span className="text-gradient">intelligence engine.</span>
           </h2>
           <p className="section-sub mx-auto">
-            Six specialist AI agents. Each owns one part of the modern marketing stack. Together, they form a single growth system that compounds quarter over quarter.
+            Six specialist intelligence modules — cultural analysis, consumer research, social listening, GEO monitoring, competitive intelligence, and growth synthesis — running together to uncover opportunities traditional agencies miss.
+          </p>
+          <p className="mt-5 text-sm text-gray-500 max-w-xl mx-auto leading-relaxed">
+            Modules power our Sprint and individual capability engagements. You buy the intelligence; we run the engine.
           </p>
         </div>
 

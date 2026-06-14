@@ -9,11 +9,11 @@ export function CaseStudyTeaser() {
           <div className="max-w-2xl">
             <p className="eyebrow mb-6">Proof</p>
             <h2 className="section-h">
-              Outcomes you can <br />
-              <span className="text-gradient">audit, not infer.</span>
+              Intelligence that <br />
+              <span className="text-gradient">changed the decision.</span>
             </h2>
             <p className="section-sub">
-              The work, the numbers, and the lessons. Three case studies from the kinds of engagements we run every quarter.
+              Three engagements where the readout pointed the brand somewhere they would not have gone on their own. The intelligence, the call it supported, and what happened next.
             </p>
           </div>
           <Link href="/case-studies" className="btn-secondary self-start md:self-end">

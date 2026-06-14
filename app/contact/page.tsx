@@ -3,13 +3,23 @@ import Link from 'next/link';
 import { GradientMesh } from '../components/GradientMesh';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { SITE, buildMetadata } from '../lib/seo';
-import { agents } from '../lib/agents';
+
+const INTEREST_OPTIONS = [
+  { value: 'Consumer Intelligence Sprint', label: 'Consumer Intelligence Sprint (Recommended)' },
+  { value: 'GEO Audit', label: 'GEO Audit' },
+  { value: 'Cultural Analysis', label: 'Cultural Analysis' },
+  { value: 'Consumer Research', label: 'Consumer Research' },
+  { value: 'Social Listening', label: 'Social Listening' },
+  { value: 'Competitive Intelligence', label: 'Competitive Intelligence' },
+  { value: 'AI Visibility Assessment', label: 'AI Visibility Assessment' },
+  { value: 'Custom Engagement', label: 'Custom Engagement' },
+];
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: 'Book a Strategy Session | BranStan',
+    title: 'Start an Engagement | BranStan',
     description:
-      'Tell us about your brand, the bottleneck you are hitting, and the timeline. We will come back with a scoped engagement and a 90-day plan.',
+      'Tell us about the decision you are about to make. We will come back with a scoped intelligence engagement and a written readout plan.',
     path: '/contact',
   }),
   robots: { index: true, follow: true },
@@ -20,7 +30,10 @@ export default function ContactPage({
 }: {
   searchParams: { service?: string };
 }) {
-  const preselected = searchParams?.service ?? '';
+  const requested = searchParams?.service ?? '';
+  const preselected = INTEREST_OPTIONS.find((o) => o.value === requested)
+    ? requested
+    : 'Consumer Intelligence Sprint';
   return (
     <>
       <main className="relative min-h-screen pt-16 pb-24 overflow-hidden">
@@ -28,9 +41,9 @@ export default function ContactPage({
 
         <div className="container-page relative">
           <header className="flex justify-between items-center mb-16 reveal">
-            <Link href="/" className="font-display text-xl font-bold tracking-tight text-white flex items-center gap-2">
+            <Link href="/" className="font-display text-xl font-bold tracking-tight text-white flex items-center gap-2.5">
               <span className="inline-block w-7 h-7 rounded-lg bg-brand-gradient shadow-glow" aria-hidden />
-              Bran<span className="text-gradient">Stan</span>
+              <span>Bran<span className="text-gradient">Stan</span></span>
             </Link>
             <Link href="/" className="text-sm text-gray-400 hover:text-white transition flex items-center gap-2">
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -39,16 +52,21 @@ export default function ContactPage({
               Back to site
             </Link>
           </header>
+          {requested && !INTEREST_OPTIONS.find((o) => o.value === requested) ? (
+            <div className="reveal mb-10 glass rounded-xl px-5 py-3 text-sm text-gray-300">
+              We couldn&apos;t recognize <span className="text-white font-semibold">{requested}</span> — defaulted to the Consumer Intelligence Sprint. Change it below if needed.
+            </div>
+          ) : null}
 
           <div className="grid lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5 reveal">
-              <p className="eyebrow mb-6">Book a strategy session</p>
+              <p className="eyebrow mb-6">Start an engagement</p>
               <h1 className="font-display font-semibold tracking-tightest text-5xl md:text-6xl text-balance leading-[1.05]">
-                Let&apos;s map your <br />
-                <span className="text-gradient">growth trajectory.</span>
+                Tell us the <br />
+                <span className="text-gradient">decision you&apos;re making.</span>
               </h1>
               <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-                A 30-minute scoping call. You bring the brand and the bottleneck. We come back with the agent mix and the 90-day plan.
+                A 30-minute scoping call. You bring the brand and the call you&apos;re about to make. We come back with the intelligence engagement scoped to it.
               </p>
 
               <div className="mt-12 space-y-6">
@@ -83,7 +101,7 @@ export default function ContactPage({
                 <ol className="space-y-3 text-sm text-gray-300">
                   <li className="flex gap-3">
                     <span className="font-mono text-gray-500">01</span>
-                    <span>We reply within one business day with a few diagnostic questions.</span>
+                    <span>We reply within one business day with a few diagnostic questions about the decision in front of you.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="font-mono text-gray-500">02</span>
@@ -91,7 +109,7 @@ export default function ContactPage({
                   </li>
                   <li className="flex gap-3">
                     <span className="font-mono text-gray-500">03</span>
-                    <span>You receive a written engagement proposal and a 90-day plan within five working days.</span>
+                    <span>You receive a written intelligence engagement proposal — Sprint or capability — within five working days.</span>
                   </li>
                 </ol>
               </div>
@@ -104,7 +122,7 @@ export default function ContactPage({
                 className="glass-strong rounded-3xl p-8 md:p-10 space-y-6"
               >
                 <input type="hidden" name="_next" value={`${SITE.url}/contact/thank-you`} />
-                <input type="hidden" name="_subject" value="New BranStan strategy session request" />
+                <input type="hidden" name="_subject" value="New BranStan engagement request" />
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <Field label="Your name" name="Name" required />
@@ -115,47 +133,46 @@ export default function ContactPage({
                 <Field label="Website (optional)" name="Website" placeholder="https://" />
 
                 <div>
-                  <label className="block text-xs uppercase tracking-[0.15em] text-gray-400 mb-2">Service you want to opt for</label>
+                  <label className="block text-xs uppercase tracking-[0.15em] text-gray-400 mb-2">What are you interested in?</label>
                   <select
-                    name="Service"
+                    name="Interest"
                     required
                     defaultValue={preselected}
                     className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition appearance-none"
                   >
-                    <option value="" disabled>Select a service...</option>
-                    {agents.map((a) => (
-                      <option key={a.slug} value={a.shortName}>{a.name}</option>
+                    {INTEREST_OPTIONS.map((o) => (
+                      <option key={o.value} value={o.value}>{o.label}</option>
                     ))}
-                    <option value="Not sure — recommend">Not sure — recommend a mix</option>
                   </select>
+                  <p className="mt-2 text-xs text-gray-500">
+                    Not sure? The Consumer Intelligence Sprint is where most engagements start.
+                  </p>
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-[0.15em] text-gray-400 mb-2">Biggest marketing challenge right now</label>
+                  <label className="block text-xs uppercase tracking-[0.15em] text-gray-400 mb-2">The decision in front of you</label>
                   <textarea
-                    name="Challenge"
+                    name="Decision"
                     rows={4}
                     required
-                    placeholder="The honest one. What is keeping you up at night about growth?"
+                    placeholder="The honest one. What growth bet are you about to make — and what would you want defensible signal on before you commit?"
                     className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder:text-gray-600 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition resize-y"
                   />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-xs uppercase tracking-[0.15em] text-gray-400 mb-2">Timeline</label>
-                    <select
-                      name="Timeline"
-                      className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition appearance-none"
-                      defaultValue=""
-                    >
-                      <option value="" disabled>Select timeline...</option>
-                      <option>Starting now</option>
-                      <option>Within 30 days</option>
-                      <option>Within 90 days</option>
-                      <option>Exploring</option>
-                    </select>
-                  </div>
+                <div>
+                  <label className="block text-xs uppercase tracking-[0.15em] text-gray-400 mb-2">Timeline</label>
+                  <select
+                    name="Timeline"
+                    className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition appearance-none"
+                    defaultValue=""
+                  >
+                    <option value="" disabled>Select timeline...</option>
+                    <option>Starting now</option>
+                    <option>Within 30 days</option>
+                    <option>Within 90 days</option>
+                    <option>Exploring</option>
+                  </select>
                 </div>
 
                 <button
@@ -169,7 +186,7 @@ export default function ContactPage({
                 </button>
 
                 <p className="text-xs text-gray-500 text-center">
-                  Your details go directly to the founder. We do not run a sales team — you talk to the person who builds the plan.
+                  Your details go directly to the founder. We do not run a sales team — you talk to the person who scopes the intelligence.
                 </p>
               </form>
             </div>

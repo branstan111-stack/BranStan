@@ -5,34 +5,34 @@ export type FAQItem = { question: string; answer: string };
 
 const HOME_FAQS: FAQItem[] = [
   {
-    question: 'What does an agentic AI marketing consultancy actually do?',
+    question: 'What is a Consumer Intelligence company, and how is BranStan different from a marketing agency?',
     answer:
-      'We combine senior marketing strategists with specialist AI agents that handle the work that used to require a six-person team — competitive research, cultural mapping, LLM citation optimization, social listening, content production, and quarterly strategy. You get one accountable partner and the depth of an in-house function.',
+      'A marketing agency sells output — campaigns, content, ads, decks. We sell intelligence and the recommendation that comes with it. The Consumer Intelligence Sprint is a 14-day engagement that gives you a defensible read on your consumer, your category, your competitors, and your AI visibility — and the growth bets the intelligence actually supports. The work that follows the readout is yours to keep, hand to an agency, or scope with us separately.',
   },
   {
-    question: 'How is this different from hiring an agency or a fractional CMO?',
+    question: 'What is the Consumer Intelligence Sprint?',
     answer:
-      'A traditional agency sells output (decks, campaigns, posts). A fractional CMO sells leadership. We sell an operating system — a sequenced growth plan, a continuous research substrate, and execution against it. The cost is closer to a senior hire than a retainer agency, and the throughput is higher.',
+      'A 14-day strategic engagement that uncovers six things: consumer insights, market shifts, competitive opportunities, cultural trends, AI discoverability gaps, and the prioritized growth opportunities the intelligence supports. You walk away with a written readout, an opportunity map, and a sequenced 90-day recommendation. It is the recommended starting point for every new client.',
+  },
+  {
+    question: 'You mention AI agents — am I buying access to those?',
+    answer:
+      'No. The agents are the proprietary intelligence engine we run internally to deliver Sprints and capability engagements. You buy intelligence and recommendations; we run the engine. If you want a single capability — a GEO Audit, a Cultural Analysis, an AI Visibility Assessment — you can engage that module on its own.',
   },
   {
     question: 'What kind of brands do you work with?',
     answer:
-      'Founder-led brands across D2C, B2B SaaS, F&B, and healthtech. Typical engagements are with companies between $1M and $50M in revenue who are past the experimentation stage and ready to compound. We are intentionally selective — we take on only as much work as we can do well.',
+      'Founder-led brands across D2C, B2B SaaS, F&B, and healthtech, typically between $1M and $50M in revenue. The common thread is teams that are about to make a non-trivial growth decision and want defensible signal underneath it before they commit budget.',
   },
   {
-    question: 'How long are engagements?',
+    question: 'Do you also execute on the recommendations?',
     answer:
-      'Initial engagements are quarterly — long enough to see real lift, short enough to test fit. Most clients renew on a quarterly cadence. We do not run annual contracts that lock you in beyond the work being valuable.',
+      'Optionally. The Sprint readout is designed to be executable by your team, an existing agency, or — if it is the right fit — by us. We are intelligence-first by design, so execution engagements only follow when the intelligence makes the path obvious.',
   },
   {
     question: 'Do you work with brands outside India?',
     answer:
-      'Yes. We currently work with brands across India, Southeast Asia, the UK, and North America. The agents are language- and culture-aware; the strategists are global.',
-  },
-  {
-    question: 'What does the first 30 days look like?',
-    answer:
-      'Week one: diagnostic and bet architecture. Week two: research substrate goes live, first cultural and citation audits delivered. Week three: first campaigns and assets ship. Week four: first performance review and roadmap refinement. You see real work, not slideware, by the end of week one.',
+      'Yes. We currently run engagements across India, Southeast Asia, the UK, and North America. The intelligence engine is language- and culture-aware; the strategists are global.',
   },
 ];
 
