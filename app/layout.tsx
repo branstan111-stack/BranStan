@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Space_Grotesk, Inter } from 'next/font/google';
 import { SITE, buildMetadata, organizationSchema, websiteSchema } from './lib/seo';
 import './globals.css';
+import Script from 'next/script';
 
 const display = Space_Grotesk({
   subsets: ['latin'],
@@ -35,6 +36,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://formspree.io" />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18386132069"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18386132069');
+          `}
+        </Script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -42,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
+
       <body>{children}</body>
     </html>
   );
